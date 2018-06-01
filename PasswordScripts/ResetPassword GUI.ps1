@@ -20,13 +20,6 @@ $usernameBox.height              = 20
 $usernameBox.location            = New-Object System.Drawing.Point(150,15)
 $usernameBox.Font                = 'Microsoft Sans Serif,10'
 
-$Execute                         = New-Object system.Windows.Forms.Button
-$Execute.text                    = "Execute"
-$Execute.width                   = 65
-$Execute.height                  = 30
-$Execute.location                = New-Object System.Drawing.Point(93,118)
-$Execute.Font                    = 'Microsoft Sans Serif,10'
-
 $Passwordlabel                   = New-Object system.Windows.Forms.Label
 $Passwordlabel.text              = "New password"
 $Passwordlabel.AutoSize          = $true
@@ -53,7 +46,14 @@ $Usernamelabel.location          = New-Object System.Drawing.Point(24,15)
 $Usernamelabel.Font              = 'Microsoft Sans Serif,10'
 $Usernamelabel.ForeColor         = "#000000"
 
-$Form.controls.AddRange(@($usernameBox,$Execute,$Passwordlabel,$passwordBox,$Usernamelabel))
+$Execute                         = New-Object system.Windows.Forms.Button
+$Execute.text                    = "Execute"
+$Execute.width                   = 65
+$Execute.height                  = 30
+$Execute.location                = New-Object System.Drawing.Point(93,118)
+$Execute.Font                    = 'Microsoft Sans Serif,10'
+
+$Form.controls.AddRange(@($usernameBox,$Passwordlabel,$passwordBox,$Usernamelabel,$Execute))
 
 #region gui events {
 $Execute.Add_Click({ 
