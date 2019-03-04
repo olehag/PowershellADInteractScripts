@@ -20,11 +20,13 @@ function find-aduser ( [string]$queryUser) {
                 Write-Host "                                       "
                 Write-Host "-------------------$i---------------------------------" -ForegroundColor Magenta
                 Write-Host ""
-                write-host "`t"$aduser[$i].DistinguishedName
+                write-host "`tOU-Path: "$aduser[$i].DistinguishedName
                 Write-Host ""
-                Write-Host "`t"$aduser[$i].Name
+                Write-Host "`tUsername: "$aduser[$i].Name
                 Write-Host ""
-                write-Host "`t"$aduser[$i].SAMAccountName
+                write-Host "`tName: "$aduser[$i].GivenName $aduser[$i].Surname
+                Write-Host ""
+                Write-Host "`tE-Mail: " $aduser[$i].UserPrincipalName
                 Write-Host "_____________________________________________________" -ForegroundColor Magenta
                 $i++
             }
