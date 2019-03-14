@@ -1,3 +1,3 @@
 # AD scripts
 
-Varying AD scripts i've written.
+Different scripts to interact with AD i've written. and stolen.
